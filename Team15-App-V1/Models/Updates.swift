@@ -13,18 +13,7 @@ class Updates: ObservableObject {
   @Published var searchText : String = ""
   @Published var filteredTransactions: [updateData] = []
   
-  init() {
-    let sec_api_key = "f57f12ef4f43516893e1be7e897aaba48770a14d48c1b683996eb9594a008656"
-
-    let sec_url = URL(string: "https://api.sec-api.io/insider-trading")!
-    var sec_request = URLRequest(url: sec_url)
-    sec_request.httpMethod = "POST"
-    sec_request.addValue(sec_api_key, forHTTPHeaderField: "Authorization")
-    
-    let sec = URLSession.shared.dataTask(with: sec_request) { (data, response, error) in
-      guard let sec_data = data else {
-        print("Error: No data to decode")
-        return
+  
       }
       
       // Decode the JSON here
@@ -32,7 +21,7 @@ class Updates: ObservableObject {
     //    print("Error: Couldn't decode data into a result")
     //    return
     //  }
-      
+    init () {
       do {
         let sec_list = try JSONDecoder().decode(SECTransactions.self, from: sec_data)
         let temp = sec_list.transactions
@@ -105,6 +94,7 @@ class Updates: ObservableObject {
     }
     sec.resume()
   }
+
   
   func search(searchText: String) {
     self.filteredTransactions = self.transactions.filter { transaction in
