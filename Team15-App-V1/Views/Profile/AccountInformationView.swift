@@ -4,7 +4,6 @@
 //
 //  Created by Philip Wellener on 11/6/22.
 //
-
 import SwiftUI
 import FirebaseAuth
 import Firebase

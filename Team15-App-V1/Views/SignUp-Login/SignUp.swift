@@ -17,11 +17,7 @@ struct SignUp: View {
     var body: some View {
             //Color.green
             
-        LinearGradient(gradient: Gradient(colors: [Color.green, Color.white]),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        //.edgesIgnoringSafeArea(.all)
-        .ignoresSafeArea()
+        
         //.overlay(
              
             
@@ -44,9 +40,17 @@ struct SignUp: View {
             //      }
             //VStack {
                 
-                Form {
+                ZStack {
                     Section {
-                        TextField("First Name", text: $firstname)
+                        VStack(alignment: .leading) {
+                                    Text("Bruh")
+                                        .font(.headline)
+                            TextField("First Name", text: $firstname)
+                                        .padding(.all)
+                                        .background(Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0).cornerRadius(5.0))
+                                    }
+                                    .padding(.horizontal, 15)
+                        
                         TextField("Last Name", text: $lastname)
                         TextField("Email", text: $email)
                         TextField("Password", text: $password)
@@ -57,7 +61,12 @@ struct SignUp: View {
                             Text("Create Account")
                         }
                     }.disabled(firstname.isEmpty || email.isEmpty)
-                }
+                }.background(LinearGradient(gradient: Gradient(colors: [Color.green, Color.white]),
+                                                 startPoint: .topLeading,
+                                                 endPoint: .bottomTrailing)
+                                  //.edgesIgnoringSafeArea(.all)
+                                  .ignoresSafeArea())
+        
                 
             //}
         

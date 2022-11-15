@@ -1,10 +1,11 @@
+
+
 //
 //  Profile.swift
 //  Team15-App-V1
 //
 //  Created by Philip Wellener on 11/7/22.
 //
-
 import Foundation
 import FirebaseAuth
 import Firebase

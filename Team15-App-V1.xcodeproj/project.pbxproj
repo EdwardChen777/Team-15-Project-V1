@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D777B1291E1A3500AD8D6E /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D777B0291E1A3500AD8D6E /* UserRepository.swift */; };
 		93222677291A69BF00AD9343 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93222676291A69BF00AD9343 /* Updates.swift */; };
 		9322267A291A6B8F00AD9343 /* UpdatesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93222679291A6B8F00AD9343 /* UpdatesRowView.swift */; };
 		9322267C291A6B9F00AD9343 /* UpdatesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322267B291A6B9F00AD9343 /* UpdatesDetailView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00D777B0291E1A3500AD8D6E /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		93222676291A69BF00AD9343 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
 		93222679291A6B8F00AD9343 /* UpdatesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesRowView.swift; sourceTree = "<group>"; };
 		9322267B291A6B9F00AD9343 /* UpdatesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesDetailView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00D777AF291E1A1A00AD8D6E /* DataRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				00D777B0291E1A3500AD8D6E /* UserRepository.swift */,
+			);
+			path = DataRepositories;
+			sourceTree = "<group>";
+		};
 		93222678291A6B7300AD9343 /* Updates */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		937A18A72916DD2100A1DACC /* Team15-App-V1 */ = {
 			isa = PBXGroup;
 			children = (
+				00D777AF291E1A1A00AD8D6E /* DataRepositories */,
 				937A18D42917332F00A1DACC /* GoogleService-Info.plist */,
 				937A18BA2916E05F00A1DACC /* Resources */,
 				937A18B92916E05400A1DACC /* ViewModels */,
@@ -161,9 +172,7 @@
 		937A18B82916E03900A1DACC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-
 				D46CFEF32919F16F002F28CF /* Home */,
-
 				93222678291A6B7300AD9343 /* Updates */,
 				D46CFEE229187660002F28CF /* Profile */,
 				937A18CD2917263900A1DACC /* SignUp-Login */,
@@ -308,13 +317,11 @@
 				937A18CC291721E400A1DACC /* Landing.swift in Sources */,
 				937A18C029171BAF00A1DACC /* BottomBar.swift in Sources */,
 				D46CFEE42918778C002F28CF /* AccountInformationView.swift in Sources */,
-
 				D46CFEF92919F411002F28CF /* HomeListView.swift in Sources */,
-
 				9322267A291A6B8F00AD9343 /* UpdatesRowView.swift in Sources */,
-
 				937A18D329172E0900A1DACC /* User.swift in Sources */,
 				D46CFEE62918779E002F28CF /* PrivacyView.swift in Sources */,
+				00D777B1291E1A3500AD8D6E /* UserRepository.swift in Sources */,
 				937A18E029173D9100A1DACC /* LogInController.swift in Sources */,
 				D46CFEEE2919BBCE002F28CF /* Profile.swift in Sources */,
 				937A18C429171BCD00A1DACC /* NewsView.swift in Sources */,
